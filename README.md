@@ -1,8 +1,18 @@
 Project Structure & Architecture
+
+
 UI Design: Combination of Storyboard (for main flows, navigation) and Programmatic UI (for custom views, reusable components).
+
+
 Architectures Used:
+
+
 MVC (Model–View–Controller) → used in controllers like TripListViewController, CreateTripViewController.
+
+
 MVVM (Model–View–ViewModel) → applied in parts of the project for better data-binding and separation of concerns (e.g., APIClient + Trip models with ViewModels for trip data).
+
+
 Reasoning: This hybrid approach makes the project easy to scale — MVC for quick iteration and MVVM where data/state management is crucial.
 
 
