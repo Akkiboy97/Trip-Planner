@@ -27,7 +27,8 @@ Activity Indicator (UIActivityIndicatorView) for loading state.
 Alerts shown for API failure.
 "View All" button inside each cell opens the Trip Detail screen.
 
-==> TripViewController
+==> TripViewController.swift
+
 Feature / Module Covered
 This is the Trip Details screen.
 Displays details of a selected trip with sections:
@@ -71,7 +72,9 @@ Dependencies / Setup
 Requires TripViewModel, TripItemType, TripElement, HeaderView, SectionCardView, ImageLoader.
 Built fully with UIKit, AutoLayout (no Storyboard).
 
-==> CreateTripViewController
+==> CreateTripViewController.swift
+
+
 Feature / Module Covered
 Create New Trip flow:
 Select city, start date, and end date.
