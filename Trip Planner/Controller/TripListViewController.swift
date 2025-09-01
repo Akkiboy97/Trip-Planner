@@ -6,7 +6,7 @@
 //
 
 protocol TripListViewControllerDelegate: AnyObject {
-    func tripListViewController(didAddTrip trip: Trip)
+    func tripListViewController(trip: Trip)
 }
 
 import UIKit
@@ -27,8 +27,6 @@ class TripListViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(didTapNew))
         
-        self.tripListViewControllerDelegate = self
-
         tableView.register(TripTableViewCell.self, forCellReuseIdentifier: TripTableViewCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
@@ -54,6 +52,7 @@ class TripListViewController: UIViewController {
 
     @objc func didTapNew() {
         let vc = CreateTripViewController(apiClient: api)
+        vc.tripListViewControllerDelegate = self
         vc.onCreateSuccess = { [weak self] created in
             self?.trips.insert(created, at: 0)
             self?.tableView.reloadData()
@@ -124,7 +123,7 @@ extension TripListViewController: TripTableViewCellDelegate {
 }
 
 extension TripListViewController: TripListViewControllerDelegate {
-    func tripListViewController(didAddTrip trip: Trip) {
+    func tripListViewController(trip: Trip) {
         self.trips.insert(trip, at: 0)
         self.tableView.reloadData()
     }

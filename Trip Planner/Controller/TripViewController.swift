@@ -35,6 +35,7 @@ final class TripViewController: UIViewController {
     
     func addItem(_ item: TripElement) {
         elements[item.type, default: []].append(item)
+        self.tableView.reloadData()
         onDataChanged?()
     }
     
@@ -246,12 +247,22 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
         
         let item = items[indexPath.row]
         cell.configure(with: item) { [weak self] in
-            self?.viewModel.removeItem(type: item.type ?? TripItemType.activity, id: UUID())
+            self?.viewModel.removeItem(type: item.type, id: UUID())
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let type = TripItemType(rawValue: indexPath.section)!
+        
+        let items = items(for: type)
+        if items.isEmpty {
+            return 50
+        }
+        return 100
     }
 }

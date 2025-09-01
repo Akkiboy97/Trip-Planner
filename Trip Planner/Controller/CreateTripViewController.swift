@@ -274,7 +274,7 @@ extension CreateTripViewController: DateRangePickerDelegate, TripDetailsDelegate
         self.trip = trip
         self.create(trip) { isSuccess in
             if(isSuccess) {
-                self.tripListViewControllerDelegate?.tripListViewController(didAddTrip: trip)
+                self.tripListViewControllerDelegate?.tripListViewController(trip: self.trip ?? trip)
                 self.navigationController?.popViewController(animated: true)
             }
         }

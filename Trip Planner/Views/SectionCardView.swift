@@ -63,11 +63,12 @@ final class SectionCardView: UIView {
             descLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
 
             addButton.topAnchor.constraint(equalTo: descLabel.bottomAnchor, constant: 12),
-            addButton.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 12),
-            addButton.trailingAnchor.constraint(lessThanOrEqualTo: container.trailingAnchor, constant: -12),
+            addButton.centerXAnchor.constraint(equalTo: container.centerXAnchor),
             addButton.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -12),
-            addButton.heightAnchor.constraint(equalToConstant: 40)
+            addButton.heightAnchor.constraint(equalToConstant: 40),
+            addButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 120)
         ])
+
     }
 
     func configure(title: String, description: String, buttonTitle: String, style: Style, onAdd: @escaping () -> Void) {

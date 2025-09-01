@@ -33,7 +33,6 @@
 		9233E4222E6364C900FE5FF4 /* Exceptions for "Trip Planner" folder in "Trip Planner" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Controller/Untitled.swift,
 				Info.plist,
 			);
 			target = 9233E3F92E6364C800FE5FF4 /* Trip Planner */;
