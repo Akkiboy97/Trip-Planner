@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripDetailViewController" customModule="Trip_Planner" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="titleLabel" id="Q0E-co-SHk"/>
+                <outlet property="descriptionTextView" destination="descriptionTextView" id="S8W-Rh-mTm"/>
+                <outlet property="imageView" destination="imageView" id="JCf-4T-MjA"/>
+                <outlet property="locationLabel" destination="locationLabel" id="wOW-zl-Ko5"/>
+                <outlet property="titleLabel" destination="dateLabel" id="Faq-gG-fNx"/>
+                <outlet property="typeLabel" destination="typeLabel" id="xJO-N8-JBl"/>
+                <outlet property="view" destination="view1" id="f8r-mH-M0p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" userLabel="First Responder"/>
+        <view contentMode="scaleToFill" id="view1">
+            <rect key="frame" x="0.0" y="0.0" width="931" height="570"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="imageView">
+                    <rect key="frame" x="0.0" y="8" width="931" height="418"/>
+                </imageView>
+                <label contentMode="scaleToFill" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="titleLabel">
+                    <rect key="frame" x="0.0" y="434" width="931" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                </label>
+                <label contentMode="scaleToFill" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="locationLabel">
+                    <rect key="frame" x="0.0" y="442" width="931" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                </label>
+                <label contentMode="scaleToFill" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dateLabel">
+                    <rect key="frame" x="0.0" y="450" width="931" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                </label>
+                <label contentMode="scaleToFill" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="typeLabel">
+                    <rect key="frame" x="0.0" y="456" width="931" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                </label>
+                <textView contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="descriptionTextView">
+                    <rect key="frame" x="0.0" y="462" width="931" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Sd1-Nj-xzq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="typeLabel" firstAttribute="top" secondItem="dateLabel" secondAttribute="bottom" constant="6" id="6jo-Pv-EeA"/>
+                <constraint firstAttribute="bottom" secondItem="descriptionTextView" secondAttribute="bottom" constant="8" id="AJG-G7-YgM"/>
+                <constraint firstItem="titleLabel" firstAttribute="top" secondItem="imageView" secondAttribute="bottom" constant="8" id="Ldr-xY-HQd"/>
+                <constraint firstItem="imageView" firstAttribute="top" secondItem="view1" secondAttribute="top" constant="8" id="YdH-PW-cP5"/>
+                <constraint firstItem="imageView" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c1"/>
+                <constraint firstItem="typeLabel" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c10"/>
+                <constraint firstItem="descriptionTextView" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c11"/>
+                <constraint firstItem="descriptionTextView" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c12"/>
+                <constraint firstItem="imageView" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c2"/>
+                <constraint firstItem="titleLabel" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c3"/>
+                <constraint firstItem="titleLabel" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c4"/>
+                <constraint firstItem="locationLabel" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c5"/>
+                <constraint firstItem="locationLabel" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c6"/>
+                <constraint firstItem="dateLabel" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c7"/>
+                <constraint firstItem="dateLabel" firstAttribute="trailing" secondItem="view1" secondAttribute="trailing" id="c8"/>
+                <constraint firstItem="typeLabel" firstAttribute="leading" secondItem="view1" secondAttribute="leading" id="c9"/>
+                <constraint firstItem="dateLabel" firstAttribute="top" secondItem="locationLabel" secondAttribute="bottom" constant="8" id="iKR-1v-LXR"/>
+                <constraint firstItem="descriptionTextView" firstAttribute="top" secondItem="typeLabel" secondAttribute="bottom" constant="6" id="pKA-ui-aGN"/>
+                <constraint firstItem="locationLabel" firstAttribute="top" secondItem="titleLabel" secondAttribute="bottom" constant="8" id="yZQ-ux-aDZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="118.32061068702289" y="-131.69014084507043"/>
+        </view>
+    </objects>
+</document>
