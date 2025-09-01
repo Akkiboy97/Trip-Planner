@@ -123,7 +123,7 @@ class TripTableViewCell: UITableViewCell {
         titleLabel.text = trip.title
         locationLabel.text = trip.location
         dateLabel.text = trip.displayDate
-        daysLabel.text = "5 Days" // you can calculate dynamically
+        daysLabel.text = "5 Days"
         viewButton.tag = int
         
         if let urlString = trip.image, let url = URL(string: urlString) {

@@ -20,7 +20,6 @@ final class ImageLoader {
             return
         }
 
-        // return cached
         if let cached = cache.object(forKey: urlString as NSString) {
             completion(cached)
             return

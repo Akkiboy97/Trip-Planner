@@ -129,7 +129,6 @@ final class TripViewController: UIViewController {
             headerStack.bottomAnchor.constraint(equalTo: container.bottomAnchor)
         ])
         
-        // Size appropriately
         let width = view.bounds.width
         container.frame = CGRect(x: 0, y: 0, width: width, height: 1)
         container.setNeedsLayout()
@@ -161,7 +160,6 @@ final class TripViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { a.dismiss(animated: true) }
     }
     
-    // MARK: - Add flow (quick alert-based form)
     private func presentAdd(for type: TripItemType) {
         let alert = UIAlertController(title: "Add \(type.singular)", message: "Enter a title and optional subtitle & price", preferredStyle: .alert)
         alert.addTextField { $0.placeholder = "Title" }
@@ -199,7 +197,6 @@ final class TripViewController: UIViewController {
     }
 }
 
-// MARK: Table datasource + delegate
 extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int { TripItemType.allCases.count }
@@ -211,7 +208,6 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let type = TripItemType(rawValue: section)!
         let items = self.items(for: type)
-        // show 1 empty cell row if none (matches your first mock)
         return max(1, items.count)
     }
     

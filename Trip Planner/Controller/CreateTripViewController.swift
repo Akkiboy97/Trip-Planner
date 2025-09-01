@@ -99,7 +99,6 @@ class CreateTripViewController: UIViewController {
         return b
     }()
     
-    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -109,7 +108,6 @@ class CreateTripViewController: UIViewController {
         createButton.addTarget(self, action: #selector(didTapCreate), for: .touchUpInside)
         locationField.addTarget(self, action: #selector(openCityPicker), for: .editingDidBegin)
         
-        // open custom date picker
         startDateField.addTarget(self, action: #selector(openDateRangePicker), for: .editingDidBegin)
         endDateField.addTarget(self, action: #selector(openDateRangePicker), for: .editingDidBegin)
         valideButton()
@@ -171,7 +169,6 @@ class CreateTripViewController: UIViewController {
         ])
     }
     
-    //MARK: Loader
     func showLoading(_ show: Bool) {
         if show {
             let av = UIActivityIndicatorView(style: .large)
@@ -209,7 +206,6 @@ class CreateTripViewController: UIViewController {
         }
     }
     
-    // MARK: - Actions
     @objc private func openDateRangePicker() {
         view.endEditing(true)
         let picker = DateRangePickerViewController()
@@ -244,7 +240,6 @@ class CreateTripViewController: UIViewController {
     }
 }
 
-// MARK: - CityPickerDelegate
 extension CreateTripViewController: CityPickerDelegate {
     func didSelectCity(_ city: Country) {
         locationField.text = city.countryName
@@ -252,7 +247,6 @@ extension CreateTripViewController: CityPickerDelegate {
     }
 }
 
-// MARK: - DateRangePickerDelegate
 extension CreateTripViewController: DateRangePickerDelegate, TripDetailsDelegate {
     func didSelectDateRange(start: Date, end: Date) {
         let formatter = DateFormatter()

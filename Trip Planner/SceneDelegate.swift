@@ -16,7 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        // Load storyboard as initial UI (Main.storyboard)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nav = storyboard.instantiateInitialViewController() as? UINavigationController
         window.rootViewController = nav

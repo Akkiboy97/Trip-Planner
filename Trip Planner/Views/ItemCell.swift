@@ -98,8 +98,6 @@ final class ItemCell: UITableViewCell {
         case .flight: placeholder = UIImage(systemName: "airplane")
         case .hotel: placeholder = UIImage(systemName: "building.2")
         case .activity: placeholder = UIImage(systemName: "figure.walk")
-//        case .none:
-//            placeholder = UIImage(systemName: "airplane")
         }
 
         thumb.image = placeholder
